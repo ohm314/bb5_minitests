@@ -16,5 +16,5 @@ echo "SLURM_NTASKS: $SLURM_NTASKS"
 echo "SLURM_NTASKS_PER_NODE: $SLURM_NTASKS_PER_NODE"
 echo "SLURM_NODELIST: $SLURM_NODELIST"
 
-srun --mpi=pmi2 osu_allgatherv -m 32:1024 -x 200 -i 100
-srun --mpi=pmi2 osu_mbw_mr
+srun osu_allgatherv -m 32:1024 -x 200 -i 100
+srun osu_mbw_mr

@@ -20,4 +20,4 @@ export MKL_NUM_THREADS=1
 
 echo "HPL is : " `which xhpl`
 
-srun --mpi=pmi2 xhpl 
+srun xhpl 

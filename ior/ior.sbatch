@@ -18,7 +18,7 @@ echo "SLURM_NODELIST: $SLURM_NODELIST"
 
 outdir=$(mktemp -p . -d iorout_XXXXXX)
 
-srun --mpi=pmi2 ior -a MPIIO -b 1g -w -r -F -t 64m -i 3  \
+srun ior -a MPIIO -b 1g -w -r -F -t 64m -i 3  \
     -o $outdir/
 
 rm -rf $outdir
